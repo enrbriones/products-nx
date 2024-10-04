@@ -1,0 +1,26 @@
+{
+  "name": "products-api",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "products-api/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "dependsOn": ["build"],
+      "options": {
+        "buildTarget": "products-api:build",
+        "runBuildTargetDependencies": false
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "products-api:build:development"
+        },
+        "production": {
+          "buildTarget": "products-api:build:production"
+        }
+      }
+    }
+  }
+}
