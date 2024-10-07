@@ -1,25 +1,23 @@
-import { Injectable, Logger, OnModuleInit } from '@nestjs/common';
+import { BadRequestException, Injectable, Logger } from '@nestjs/common';
 import { CreateProductDto } from './dto/create-product.dto';
-import { PrismaClient } from '@prisma/client';
+import { PrismaService } from '../prisma/prisma.service';
 
 @Injectable()
-export class ProductsService extends PrismaClient implements OnModuleInit {
+export class ProductsService  {
 
   private readonly logger = new Logger('ProductService');
 
 
-  onModuleInit() {
-    this.$connect();
-    this.logger.log('MongoDB connected')
-  }
+ constructor(private prisma: PrismaService){}
+
   async create(createProductDto: CreateProductDto) {
-    return await this.product.create({
+    return await this.prisma.product.create({
       data: createProductDto
     });
   }
 
   findAll() {
-    return this.product.findMany({});
+    return this.prisma.product.findMany({});
   }
 
   // findOne(id: number) {
@@ -31,11 +29,11 @@ export class ProductsService extends PrismaClient implements OnModuleInit {
   // }
 
   async remove(id: string) {
-    const productExists = await this.product.findFirst({where: {id}});
+    const productExists = await this.prisma.product.findFirst({where: {id}});
     if(!productExists){
-      throw new Error("Product can't be found")
+      throw new BadRequestException("Product can't be found")
     }
-    return this.product.delete({
+    return this.prisma.product.delete({
       where: { id }
     });
   }
