@@ -18,6 +18,7 @@ async function bootstrap() {
     })
    );
   app.setGlobalPrefix(globalPrefix);
+  app.enableCors();
   const port = process.env.PORT || 3000;
   await app.listen(port);
   Logger.log(

@@ -107,8 +107,30 @@ And join the Nx community:
 - [Our Youtube channel](https://www.youtube.com/@nxdevtools)
 - [Our blog](https://nx.dev/blog?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
 
+# Explicación
+
+## Probar API productos
+la ruta se encuentra en
+```
+http://localhost:3000/api/products
+```
+
+* GET: Obtiene todos los productos
+* POST: Agrega un producto. La estructura de datos es la siguiente:
+```
+{
+    "name": "Producto X",
+    "description": "una descripcion X",
+    "price": 16.00
+}
+```
+Todos los campos son obligatorios y deben contener datos. El precio no puede ser menor a cero.
+
+* DELETE: Elimina un producto. Debe enviarse el id por params en la URL.
+
 ## Tests
 
 ```
 nx test products-api
+nx test products-client
 ```
