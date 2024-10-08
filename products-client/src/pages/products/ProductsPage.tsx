@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react';
 
-import ProductForm from '../components/ProductForm';
-import ProductList from '../components/ProductList';
+import ProductForm from './components/ProductForm';
+import ProductList from './components/ProductList';
 import {
   createProduct,
   deleteProduct,
   getProducts,
   Product,
-} from '../services/productService';
-import Modal from '../components/Modal';
-import Button from '../components/Button';
+} from './services/productService';
+import Modal from '../../components/Modal';
+import Button from '../../components/Button';
 
 const ProductsPage: React.FC = () => {
   const [products, setProducts] = useState<Product[]>([]);

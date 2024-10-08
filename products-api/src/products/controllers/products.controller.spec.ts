@@ -1,7 +1,7 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { ProductsController } from './products.controller';
-import { ProductsService } from './products.service';
-import { CreateProductDto } from './dto/create-product.dto';
+import { ProductsService } from '../services/products.service';
+import { CreateProductDto } from '../dto/create-product.dto';
 
 const mockProduct = {
   id: '1',

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ProductsPage from '../pages/ProductsPage';
+import ProductsPage from '../pages/products/ProductsPage';
 import { Route, Routes } from 'react-router-dom';
 
 const App: React.FC = () => {

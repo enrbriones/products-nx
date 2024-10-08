@@ -1,7 +1,7 @@
 import { Controller, Get, Post, Body, Param, Delete } from '@nestjs/common';
-import { ProductsService } from './products.service';
-import { CreateProductDto } from './dto/create-product.dto';
-import { MongoIdPipe } from '../pipes/mongo-id/mongo-id.pipe';
+import { ProductsService } from '../services/products.service';
+import { CreateProductDto } from '../dto/create-product.dto';
+import { MongoIdPipe } from '../../app/pipes/mongo-id/mongo-id.pipe';
 // import { UpdateProductDto } from './dto/update-product.dto';
 
 @Controller('products')
