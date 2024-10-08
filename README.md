@@ -109,6 +109,29 @@ And join the Nx community:
 
 # Explicación
 
+## Prisma
+* instalar prisma CLI
+```
+npx prisma
+```
+
+* configurar la cadena de conexión en los envs, en la variable DATABASE_URL
+
+* inicializar prisma en el proyecto, para crear el esquema.
+```
+npx prisma init
+```
+
+* cada vez que se modifica el esquema, ejecutar este comando si se utiliza MongoDB
+```
+npx prisma generate
+```
+
+* En el caso de utilizar una base de datos SQL, ejecutar
+```
+npx prisma migrate dev --name init
+```
+
 ## Probar API productos
 la ruta se encuentra en
 ```
