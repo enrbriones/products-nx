@@ -1,12 +1,8 @@
 import axios from 'axios';
+import { Product } from '../interfaces/product.interface';
 
 // Definimos la interfaz del producto
-export interface Product {
-  id: string;
-  name: string;
-  description: string;
-  price: number;
-}
+
 
 //Para efectos prácticos, dejo la URL en duro. Pero esto debería estar en un archivo .env
 const API_URL = 'http://localhost:3000/api/products';

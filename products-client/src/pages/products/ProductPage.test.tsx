@@ -1,13 +1,13 @@
 // src/components/ProductList.test.tsx
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
+import ProductsPage from './ProductsPage';
 // import '@testing-library/jest-dom/extend-expect'; // Para métodos adicionales como `toBeInTheDocument`
-import ProductList from './ProductList';
 
-describe('ProductList Component', () => {
+describe('ProductPage Component', () => {
   test('', () => {
-    const {container}=render(<ProductList products={[]} onDelete={()=>{console.log('hola')}} />);
-    // console.log(container)
+    const {container}=render(<ProductsPage />);
+    // screen.debug();
     expect(container).toMatchSnapshot()
   });
 });

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Product } from '../services/product.service';
+import { Product } from '../interfaces/product.interface';
 
 interface ProductListProps {
   products: Product[];

@@ -6,34 +6,27 @@ import {
   createProduct,
   deleteProduct,
   getProducts,
-  Product,
 } from './services/product.service';
 import Modal from '../../components/Modal';
 import Button from '../../components/Button';
+import { Product } from './interfaces/product.interface';
+import { useFetchProducts } from './hooks/useFetchProducts';
 
 const ProductsPage: React.FC = () => {
-  const [products, setProducts] = useState<Product[]>([]);
-  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  useEffect(() => {
-    const fetchProducts = async () => {
-      const fetchedProducts = await getProducts();
-      setProducts(fetchedProducts);
-      setIsModalOpen(false);
-    };
-
-    fetchProducts();
-  }, []);
+  const {products, setProducts, isModalOpen, setIsModalOpen, reFetch} = useFetchProducts();
 
   const handleAddProduct = async (newProduct: Omit<Product, 'id'>) => {
     const createdProduct = await createProduct(newProduct);
-    setProducts([...products, createdProduct]);
+    // setProducts([...products, createdProduct]);
+    reFetch()
     setIsModalOpen(false);
   };
 
   const handleDeleteProduct = async (id: string) => {
     await deleteProduct(id);
-    setProducts(products.filter((product) => product.id !== id));
+    // setProducts(products.filter((product) => product.id !== id));
+    reFetch()
   };
 
   const handleOpen = () => setIsModalOpen(true)
