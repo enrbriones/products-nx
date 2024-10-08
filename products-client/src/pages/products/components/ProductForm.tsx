@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Product } from '../services/productService';
+import { Product } from '../services/product.service';
 
 interface ProductFormProps {
   onAdd: (product: Omit<Product, 'id'>) => void;

@@ -7,7 +7,7 @@ import {
   deleteProduct,
   getProducts,
   Product,
-} from './services/productService';
+} from './services/product.service';
 import Modal from '../../components/Modal';
 import Button from '../../components/Button';
 
