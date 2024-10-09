@@ -7,6 +7,7 @@ exports[`ProductList Component  1`] = `
     role="alert"
   >
     <span
+      aria-label="productsnotfound"
       class="font-medium"
     >
       No hay productos en la lista!

@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 import ProductForm from './components/ProductForm';
 import ProductList from './components/ProductList';
 import {
   createProduct,
   deleteProduct,
-  getProducts,
 } from './services/product.service';
 import Modal from '../../components/Modal';
 import Button from '../../components/Button';
@@ -14,18 +13,16 @@ import { useFetchProducts } from './hooks/useFetchProducts';
 
 const ProductsPage: React.FC = () => {
 
-  const {products, setProducts, isModalOpen, setIsModalOpen, reFetch} = useFetchProducts();
+  const {products, isModalOpen, setIsModalOpen, reFetch} = useFetchProducts();
 
   const handleAddProduct = async (newProduct: Omit<Product, 'id'>) => {
-    const createdProduct = await createProduct(newProduct);
-    // setProducts([...products, createdProduct]);
+   await createProduct(newProduct);
     reFetch()
     setIsModalOpen(false);
   };
 
   const handleDeleteProduct = async (id: string) => {
     await deleteProduct(id);
-    // setProducts(products.filter((product) => product.id !== id));
     reFetch()
   };
 

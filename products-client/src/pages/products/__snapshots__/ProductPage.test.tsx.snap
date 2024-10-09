@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ProductPage Component  1`] = `
+exports[`ProductPage Component it should display alert message if products is empty 1`] = `
 <div>
   <div
     class="container mx-auto"
@@ -20,14 +20,339 @@ exports[`ProductPage Component  1`] = `
       </button>
     </div>
     <div
-      class="p-4 mb-4 mt-8 text-sm text-blue-800 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-400 text-center"
-      role="alert"
+      class="relative overflow-x-auto shadow-md sm:rounded-lg container flex justify-center"
     >
-      <span
-        class="font-medium"
+      <table
+        class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400"
       >
-        No hay productos en la lista!
-      </span>
+        <thead
+          class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
+        >
+          <tr
+            class=""
+          >
+            <th
+              class="px-6 py-3"
+            >
+              Nombre
+            </th>
+            <th
+              class="px-6 py-3"
+            >
+              Descripción
+            </th>
+            <th
+              class="px-6 py-3"
+            >
+              Precio
+            </th>
+            <th
+              class="px-6 py-3"
+            />
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            class="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
+          >
+            <td
+              class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+            >
+              producto 1
+            </td>
+            <td
+              class="px-6 py-4"
+            >
+              desc1
+            </td>
+            <td
+              class="px-6 py-4"
+            >
+              $
+              1111111
+            </td>
+            <td
+              class="px-6 py-4 flex justify-end"
+            >
+              <button
+                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-3 rounded"
+                style="margin-left: 10px;"
+              >
+                Eliminar
+              </button>
+            </td>
+          </tr>
+          <tr
+            class="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
+          >
+            <td
+              class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+            >
+              producto 2
+            </td>
+            <td
+              class="px-6 py-4"
+            >
+              desc2
+            </td>
+            <td
+              class="px-6 py-4"
+            >
+              $
+              1111111
+            </td>
+            <td
+              class="px-6 py-4 flex justify-end"
+            >
+              <button
+                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-3 rounded"
+                style="margin-left: 10px;"
+              >
+                Eliminar
+              </button>
+            </td>
+          </tr>
+          <tr
+            class="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
+          >
+            <td
+              class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+            >
+              producto 3
+            </td>
+            <td
+              class="px-6 py-4"
+            >
+              desc3
+            </td>
+            <td
+              class="px-6 py-4"
+            >
+              $
+              1111111
+            </td>
+            <td
+              class="px-6 py-4 flex justify-end"
+            >
+              <button
+                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-3 rounded"
+                style="margin-left: 10px;"
+              >
+                Eliminar
+              </button>
+            </td>
+          </tr>
+          <tr
+            class="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
+          >
+            <td
+              class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+            >
+              producto 4
+            </td>
+            <td
+              class="px-6 py-4"
+            >
+              desc4
+            </td>
+            <td
+              class="px-6 py-4"
+            >
+              $
+              1111111
+            </td>
+            <td
+              class="px-6 py-4 flex justify-end"
+            >
+              <button
+                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-3 rounded"
+                style="margin-left: 10px;"
+              >
+                Eliminar
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ProductPage Component it should display table if products have data 1`] = `
+<div>
+  <div
+    class="container mx-auto"
+  >
+    <div
+      class="text-center flex justify-between mt-6"
+    >
+      <h1
+        class="text-2xl"
+      >
+        Productos
+      </h1>
+      <button
+        class="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600 mb-2 shadow-md"
+      >
+        Agregar producto
+      </button>
+    </div>
+    <div
+      class="relative overflow-x-auto shadow-md sm:rounded-lg container flex justify-center"
+    >
+      <table
+        class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400"
+      >
+        <thead
+          class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
+        >
+          <tr
+            class=""
+          >
+            <th
+              class="px-6 py-3"
+            >
+              Nombre
+            </th>
+            <th
+              class="px-6 py-3"
+            >
+              Descripción
+            </th>
+            <th
+              class="px-6 py-3"
+            >
+              Precio
+            </th>
+            <th
+              class="px-6 py-3"
+            />
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            class="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
+          >
+            <td
+              class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+            >
+              producto 1
+            </td>
+            <td
+              class="px-6 py-4"
+            >
+              desc1
+            </td>
+            <td
+              class="px-6 py-4"
+            >
+              $
+              1111111
+            </td>
+            <td
+              class="px-6 py-4 flex justify-end"
+            >
+              <button
+                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-3 rounded"
+                style="margin-left: 10px;"
+              >
+                Eliminar
+              </button>
+            </td>
+          </tr>
+          <tr
+            class="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
+          >
+            <td
+              class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+            >
+              producto 2
+            </td>
+            <td
+              class="px-6 py-4"
+            >
+              desc2
+            </td>
+            <td
+              class="px-6 py-4"
+            >
+              $
+              1111111
+            </td>
+            <td
+              class="px-6 py-4 flex justify-end"
+            >
+              <button
+                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-3 rounded"
+                style="margin-left: 10px;"
+              >
+                Eliminar
+              </button>
+            </td>
+          </tr>
+          <tr
+            class="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
+          >
+            <td
+              class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+            >
+              producto 3
+            </td>
+            <td
+              class="px-6 py-4"
+            >
+              desc3
+            </td>
+            <td
+              class="px-6 py-4"
+            >
+              $
+              1111111
+            </td>
+            <td
+              class="px-6 py-4 flex justify-end"
+            >
+              <button
+                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-3 rounded"
+                style="margin-left: 10px;"
+              >
+                Eliminar
+              </button>
+            </td>
+          </tr>
+          <tr
+            class="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
+          >
+            <td
+              class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+            >
+              producto 4
+            </td>
+            <td
+              class="px-6 py-4"
+            >
+              desc4
+            </td>
+            <td
+              class="px-6 py-4"
+            >
+              $
+              1111111
+            </td>
+            <td
+              class="px-6 py-4 flex justify-end"
+            >
+              <button
+                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-3 rounded"
+                style="margin-left: 10px;"
+              >
+                Eliminar
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </div>

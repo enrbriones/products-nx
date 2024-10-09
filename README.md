@@ -156,4 +156,7 @@ Todos los campos son obligatorios y deben contener datos. El precio no puede ser
 ```
 nx test products-api
 nx test products-client
+
+nx test products-api --watchAll
+nx test products-client --watchAll
 ```

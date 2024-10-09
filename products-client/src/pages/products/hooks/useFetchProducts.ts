@@ -11,7 +11,6 @@ export const useFetchProducts = ()=> {
     
     const fetchProducts = useCallback(async () => {
         const fetchedProducts = await getProducts();
-        console.log('fetchedProducts', fetchedProducts)
         setProducts(fetchedProducts);
         setIsModalOpen(false);
     }, []);
