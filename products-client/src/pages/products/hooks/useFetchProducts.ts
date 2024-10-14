@@ -1,7 +1,7 @@
 
 import { useCallback, useEffect, useState } from "react";
-import { getProducts } from "../services/product.service";
 import { Product } from "../interfaces/product.interface";
+import { getProducts } from "../services";
 
 
 export const useFetchProducts = ()=> {

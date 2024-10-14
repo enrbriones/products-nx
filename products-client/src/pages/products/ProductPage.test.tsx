@@ -2,8 +2,7 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import ProductsPage from './ProductsPage';
 import { useFetchProducts } from './hooks/useFetchProducts';
-// import '@testing-library/jest-dom/extend-expect'; // Para métodos adicionales como `toBeInTheDocument`
-import '@testing-library/react/'; // Para métodos adicionales como `toBeInTheDocument`
+import '@testing-library/jest-dom/'; // Para métodos adicionales como `toBeInTheDocument`
 
 jest.mock('./hooks/useFetchProducts');
 
@@ -47,6 +46,7 @@ describe('ProductPage Component', () => {
     // screen.debug();
     expect(container).toMatchSnapshot();
     expect(table).toBeTruthy();
+    expect(table).toBeInTheDocument()
   });
   test('it should display alert message if products is empty', () => {
     (useFetchProducts as jest.Mock).mockReturnValue({
